@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>CSGetLastBookingDaysAgo</name>
+        <order/>
+        <script><![CDATA[// function onLoad() {
+//   var ga = new GlideAjax('GetLastBookingDaysAgo');
+//   ga.addParam('sysparm_name', 'getDaysSinceLastBooking');
+//   ga.getXMLAnswer(function(response) {
+//     var days = parseInt(response, 10); // Safe — always a number
+
+//     if (days === -1) {
+//       g_form.addInfoMessage("You have not booked any rooms yet.");
+//     } else if (days === 0) {
+//       g_form.addInfoMessage("You booked a room today.");
+//     } else if (days === 1) {
+//       g_form.addInfoMessage("You booked a room 1 day ago.");
+//     } else {
+//       g_form.addInfoMessage("You booked a room " + days + " days ago.");
+//     }
+//   });
+// }
+function onLoad() {
+    if (!g_form.isNewRecord()) {
+        return; // Exit if it's not a new record
+    }
+
+    var ga = new GlideAjax('GetLastBookingDaysAgo');
+    ga.addParam('sysparm_name', 'getDaysSinceLastBooking');
+    ga.getXMLAnswer(function(response) {
+        var days = parseInt(response, 10); // Ensure it's a number
+
+        if (days === -1) {
+            g_form.addInfoMessage("You have not booked any rooms yet.");
+        } else if (days === 0) {
+            g_form.addInfoMessage("You booked a room today.");
+        } else if (days === 1) {
+            g_form.addInfoMessage("You booked a room 1 day ago.");
+        } else {
+            g_form.addInfoMessage("You booked a room " + days + " days ago.");
+        }
+    });
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 17:19:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0af61033c3cf6210eae2e04bb00131ab</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CSGetLastBookingDaysAgo</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_client_0af61033c3cf6210eae2e04bb00131ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-06 10:52:11</sys_updated_on>
+        <table>x_1809800_event_0_event_booking</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

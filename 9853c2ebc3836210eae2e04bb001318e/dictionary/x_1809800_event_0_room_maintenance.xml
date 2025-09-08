@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="23e3ceebc3836210eae2e04bb00131d2" label="Room Maintenance" max_length="40" name="x_1809800_event_0_room_maintenance" type="collection">
+        <element label="Reason" max_length="40" name="reason" type="string"/>
+        <element label="Entered By" max_length="32" name="entered_by" reference="sys_user" type="reference"/>
+        <element label="Room" max_length="32" name="room" reference="x_1809800_event_0_event_room" type="reference"/>
+        <element label="Start DateTime" max_length="40" name="start_datetime" type="glide_date_time"/>
+        <element label="End DateTime" max_length="40" name="end_datetime" type="glide_date_time"/>
+        <index name="index">
+            <element name="entered_by"/>
+        </index>
+        <index name="index2">
+            <element name="room"/>
+        </index>
+    </element>
+</database>

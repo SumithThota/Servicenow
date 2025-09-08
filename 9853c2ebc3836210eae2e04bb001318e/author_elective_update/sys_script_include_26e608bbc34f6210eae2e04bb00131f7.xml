@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1809800_event_0.KAPGetLastBookingDaysAgo</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>KAPGetLastBookingDaysAgo</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var KAPGetLastBookingDaysAgo = Class.create();
+KAPGetLastBookingDaysAgo.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+  
+  getDaysSinceLastBooking: function() {
+    var userId = gs.getUserID();
+    var gr = new GlideRecord("x_1809800_event_0_event_booking"); 
+
+    gr.addQuery('booked_by', userId);
+    gr.orderByDesc('start_date');  // Sort by latest
+    gr.setLimit(1);
+    gr.query();
+
+    if (gr.next()) {
+      var last = new GlideDateTime(gr.getValue('start_date'));
+      var now = new GlideDateTime();
+      var diffMillis = GlideDateTime.subtract(now, last).getNumericValue();
+      var days = Math.floor(diffMillis / (1000 * 60 * 60 * 24));
+      return days + '';
+    }
+
+    return '-1'; // No bookings found
+  }
+
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 16:09:50</sys_created_on>
+        <sys_id>26e608bbc34f6210eae2e04bb00131f7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>KAPGetLastBookingDaysAgo</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_include_26e608bbc34f6210eae2e04bb00131f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 17:15:24</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</application>
+        <file_path/>
+        <instance_id>699cbc351b31f5d06a85eb9b2d4bcbb3</instance_id>
+        <instance_name>dev182494</instance_name>
+        <name>sys_script_include_26e608bbc34f6210eae2e04bb00131f7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1809800_event_0.KAPGetLastBookingDaysAgo&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;KAPGetLastBookingDaysAgo&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var KAPGetLastBookingDaysAgo = Class.create();
+KAPGetLastBookingDaysAgo.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+  
+  getDaysSinceLastBooking: function() {
+    var userId = gs.getUserID();
+    var gr = new GlideRecord("x_1809800_event_0_event_booking"); 
+
+    gr.addQuery('booked_by', userId);
+    gr.orderByDesc('start_date');  // Sort by latest
+    gr.setLimit(1);
+    gr.query();
+
+    if (gr.next()) {
+      var last = new GlideDateTime(gr.getValue('start_date'));
+      var now = new GlideDateTime();
+      var diffMillis = GlideDateTime.subtract(now, last).getNumericValue();
+      var days = Math.floor(diffMillis / (1000 * 60 * 60 * 24));
+      return days + '';
+    }
+
+    return '-1'; // No bookings found
+  }
+
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-08-05 16:09:50&lt;/sys_created_on&gt;&lt;sys_id&gt;26e608bbc34f6210eae2e04bb00131f7&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;KAPGetLastBookingDaysAgo&lt;/sys_name&gt;&lt;sys_package display_value="Event Space Booking " source="x_1809800_event_0"&gt;9853c2ebc3836210eae2e04bb001318e&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Event Space Booking "&gt;9853c2ebc3836210eae2e04bb001318e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_26e608bbc34f6210eae2e04bb00131f7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-08-05 17:15:24&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1639692299</payload_hash>
+        <record_name>KAPGetLastBookingDaysAgo</record_name>
+        <reverted_from/>
+        <source>dc5306ebc3836210eae2e04bb0013132</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 17:15:24</sys_created_on>
+        <sys_id>66d61cffc38f6210eae2e04bb00131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1987b3b0f1e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 17:15:24</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>ead61cff928f6210bc9e179d32819dcc</update_guid>
+        <update_guid_history>ead61cff928f6210bc9e179d32819dcc:1639692299,f9c594bfd98f6210bacdabcac65ae39a:-1403388250,079354fbb38f621058ff621fcb07cb96:-1889505737,26c19c3b248f62104d981724874aa782:-417402767,4651d03bd78f6210ccbc5f361501fce2:1150413189,d4ae8837a88f6210da58d2530f25f82a:981142255,c24ec037088f6210c2ca8c6b187b151d:-255724614,6acd08b3368f6210cc3ef9fe3aa4d43c:-973382722,82d744fb394f6210b28d04b311745a6e:-1721132802</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 17:15:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1f36b907ab2e480086ac4d8114d90000</sys_id>
+        <sys_metadata>26e608bbc34f6210eae2e04bb00131f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KAPGetLastBookingDaysAgo</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_scope_delete display_value="">1b77d2312a5e40009b143f0e0a900000</sys_scope_delete>
+        <sys_update_name>sys_script_include_26e608bbc34f6210eae2e04bb00131f7</sys_update_name>
+        <sys_update_version display_value="sys_script_include_26e608bbc34f6210eae2e04bb00131f7">66d61cffc38f6210eae2e04bb00131cd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 17:15:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

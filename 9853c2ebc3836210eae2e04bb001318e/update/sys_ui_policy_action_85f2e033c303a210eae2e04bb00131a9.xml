@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>room</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 18:08:50</sys_created_on>
+        <sys_id>85f2e033c303a210eae2e04bb00131a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>room</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_85f2e033c303a210eae2e04bb00131a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 18:08:50</sys_updated_on>
+        <table>x_1809800_event_0_event_booking</table>
+        <ui_policy display_value="Hide Room field until start and end date filled">e2922cffc3cf6210eae2e04bb0013182</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=85f2e033c303a210eae2e04bb00131a9"/>
+</record_update>

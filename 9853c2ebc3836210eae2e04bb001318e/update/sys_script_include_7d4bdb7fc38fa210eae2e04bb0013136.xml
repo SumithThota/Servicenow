@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1809800_event_0.KAPRoomsFilteredBasedOnAvailabilityOfStartEnd</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>KAPRoomsFilteredBasedOnAvailabilityOfStartEnd</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// var KAPRoomsFilteredBasedOnAvailabilityOfStartEnd = Class.create();
+// KAPRoomsFilteredBasedOnAvailabilityOfStartEnd.prototype = {
+//     initialize: function() {},
+
+//     getAvailableRoomsQuery: function(startDate, endDate) {
+//         var bookedRooms = [];
+
+//         var bookingGR = new GlideRecord('x_1809800_event_0_event_booking'); // Your booking table
+//         bookingGR.addQuery('status', 'available'); // Only include active bookings
+//         bookingGR.addQuery('start_date', '<', endDate); // Overlapping bookings
+//         bookingGR.addQuery('end_date', '>', startDate);
+//         bookingGR.query();
+
+//         while (bookingGR.next()) {
+//             bookedRooms.push(bookingGR.getValue('room'));
+//         }
+        
+//         if (bookedRooms.length > 0) {
+//             return 'sys_idNOT IN' + bookedRooms.join(',');
+//         } else {
+//             return ''; // No conflicts → all rooms available
+//         }
+//     }
+// };
+
+
+// var KAPRoomsFilteredBasedOnAvailabilityOfStartEnd = Class.create();
+// KAPRoomsFilteredBasedOnAvailabilityOfStartEnd.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    
+//     getAvailableRoomsQuery: function () {
+//         var startDateTime = this.getParameter('sysparm_start');
+//         var endDateTime = this.getParameter('sysparm_end');
+
+//         var bookedRooms = [];
+
+//         // Convert datetime to just date strings (yyyy-MM-dd)
+//         var inputStartDate = new GlideDateTime(startDateTime).getDate().getValue();
+//         var inputEndDate = new GlideDateTime(endDateTime).getDate().getValue();
+
+//         var bookingGR = new GlideRecord('x_1809800_event_0_event_booking');
+//        // bookingGR.addQuery('status', 'cancelled');
+//         bookingGR.query();
+
+//         while (bookingGR.next()) {
+//             var bookingStartDate = new GlideDateTime(bookingGR.getValue('start_date')).getDate().getValue();
+//             var bookingEndDate = new GlideDateTime(bookingGR.getValue('end_date')).getDate().getValue();
+
+//             if (bookingStartDate <= inputEndDate && bookingEndDate >= inputStartDate) {
+//                 bookedRooms.push(bookingGR.getValue('room'));
+//             }
+//         }
+
+//         if (bookedRooms.length > 0) {
+//             return 'sys_idIN' + bookedRooms.join(',');
+//         } else {
+//             return ''; // No conflicts → all rooms available
+//         }
+//     }
+// });
+
+
+var KAPRoomsFilteredBasedOnAvailabilityOfStartEnd = Class.create();
+KAPRoomsFilteredBasedOnAvailabilityOfStartEnd.prototype = {
+    initialize: function () { },
+ 
+    getAvailableRoomsQuery: function (startDate, endDate) {
+        var availableRooms = [];
+ 
+        // Convert to GlideDateTime
+        var start = new GlideDateTime(startDate);
+        var end = new GlideDateTime(endDate);
+ 
+        // Step 1: Get all rooms
+        var roomGR = new GlideRecord('x_1809800_event_0_event_room');
+        roomGR.query();
+        while (roomGR.next()) {
+            availableRooms.push(roomGR.sys_id.toString());
+        }
+ 
+        // Step 2: Exclude rooms that have bookings overlapping with this time
+        var bookingGR = new GlideRecord('x_1809800_event_0_event_booking');
+        bookingGR.addQuery('start_date', '<=', end);
+        bookingGR.addQuery('end_date', '>=', start);
+        bookingGR.addQuery('status', '!=', 'cancelled');
+        bookingGR.query();
+        while (bookingGR.next()) {
+            var bookedRoomId = bookingGR.room.sys_id.toString();
+            var index = availableRooms.indexOf(bookedRoomId);
+            if (index !== -1) {
+                availableRooms.splice(index, 1);
+            }
+        }
+ 
+        // Step 3: Exclude rooms under maintenance during this time
+        var maintGR = new GlideRecord('x_1809800_event_0_room_maintenance');
+        //maintGR.addQuery('status', 'under_maintenance');
+        maintGR.addQuery('start_datetime', '<=', end); // overlaps end
+        maintGR.addQuery('end_datetime', '>=', start); // overlaps start
+        maintGR.query();
+        while (maintGR.next()) {
+            var maintainedRoomId = maintGR.room.sys_id.toString();
+            var ind = availableRooms.indexOf(maintainedRoomId);
+            if (ind !== -1) {
+                availableRooms.splice(ind, 1);
+            }
+        }
+ 
+        return 'sys_idIN' + availableRooms.join(',');
+    },
+ 
+    type: 'KAPRoomsFilteredBasedOnAvailabilityOfStartEnd'
+};
+ 
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-06 09:17:31</sys_created_on>
+        <sys_id>7d4bdb7fc38fa210eae2e04bb0013136</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>KAPRoomsFilteredBasedOnAvailabilityOfStartEnd</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_include_7d4bdb7fc38fa210eae2e04bb0013136</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-06 10:40:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

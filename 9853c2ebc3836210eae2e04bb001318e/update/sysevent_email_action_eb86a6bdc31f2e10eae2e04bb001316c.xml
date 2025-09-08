@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_1809800_event_0_event_booking</collection>
+        <condition table="x_1809800_event_0_event_booking">status=cancelled^notesISNOTEMPTY^EQ<item display_value="Cancelled" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="cancelled"/>
+            <item endquery="false" field="notes" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<center>
+<table style="padding: 20px 0;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#f6f8fa">
+<tbody>
+<tr>
+<td align="center"><!-- Main Container -->
+<table style="border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden;" border="0" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"><!-- Header -->
+<tbody>
+<tr>
+<td style="padding: 20px; text-align: center; color: #ffffff;" bgcolor="#003366">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="left" width="60"><img style="display: block; border: 2px solid #ffffff;" title="kaptius-we-make-workflow-34030f52.webp" src="/sys_attachment.do?sys_id=44372a3dc31f2e10eae2e04bb001314a" alt="Kaptius Logo" width="60" height="60"></td>
+<td style="font-size: 20px; font-weight: bold; padding-left: 15px; color: #ffffff;" align="left">KAPTIUS - We Make Workflow</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding: 30px; color: #333333; font-size: 16px; line-height: 24px;"><!-- Dynamic body from ServiceNow --></td>
+</tr>
+<tr>
+<td style="padding: 30px; color: #333333; font-size: 16px; line-height: 24px;">
+<p style="margin: 0 0 15px 0;">Dear Customer,</p>
+<p style="margin: 0 0 15px 0;">Your Room:${room} has been cancelled. Here are the details for your reference.</p>
+<p style="margin-top: 20px; text-align: center;"><a style="background-color: #4caf50; color: #ffffff; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block;" href="https://dev182494.service-now.com/nav_to.do?uri=x_1809800_event_0_event_booking.do?sys_id=${sys_id}" target="_blank" rel="noopener"> View Booking </a></p>
+<!-- Footer --></td>
+</tr>
+<tr>
+<td style="padding: 20px; font-size: 12px; color: #888888; text-align: center; line-height: 18px;" bgcolor="#f2f2f2"><strong>Sumith Thota</strong><br>Associate Developer<br>My Home Hub, 7<sup>th</sup> floor, Block-1, West wing,<br>Hi-Tech City, Hyderabad, Telangana, India<br>Phone: 8500448118 | <a style="color: #888888; text-decoration: underline;" href="mailto:sumith.thota@kaptius.com">sumith.thota@kaptius.com</a><br><a style="color: #888888;" href="http://www.kaptius.com/">www.kaptius.com</a><br><br>&copy; 2025 KAPTIUS. All rights reserved.<br>This is an automated message. Please do not reply to this email.</td>
+</tr>
+</tbody>
+</table>
+<!-- End Main Container --></td>
+</tr>
+</tbody>
+</table>
+</center>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>KAP Status Cancelled</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>booked_by</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject/>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-12 09:01:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eb86a6bdc31f2e10eae2e04bb001316c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>KAP Status Cancelled</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sysevent_email_action_eb86a6bdc31f2e10eae2e04bb001316c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-12 09:05:50</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

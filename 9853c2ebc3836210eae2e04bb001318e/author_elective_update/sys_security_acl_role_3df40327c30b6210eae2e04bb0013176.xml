@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 11:17:54</sys_created_on>
+        <sys_id>3df40327c30b6210eae2e04bb0013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1809800_event_0_event_booking.x_1809800_event_0.event_booking_user</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_security_acl display_value="x_1809800_event_0_event_booking">9f534b63c30b6210eae2e04bb001316d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_3df40327c30b6210eae2e04bb0013176</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 11:17:54</sys_updated_on>
+        <sys_user_role display_value="x_1809800_event_0.event_booking_user" name="x_1809800_event_0.event_booking_user">94250a6fc3836210eae2e04bb0013147</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</application>
+        <file_path/>
+        <instance_id>699cbc351b31f5d06a85eb9b2d4bcbb3</instance_id>
+        <instance_name>dev182494</instance_name>
+        <name>sys_security_acl_role_3df40327c30b6210eae2e04bb0013176</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-05 11:17:54</sys_created_on><sys_id>3df40327c30b6210eae2e04bb0013176</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1809800_event_0_event_booking.x_1809800_event_0.event_booking_user</sys_name><sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package><sys_policy/><sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope><sys_security_acl display_value="x_1809800_event_0_event_booking">9f534b63c30b6210eae2e04bb001316d</sys_security_acl><sys_update_name>sys_security_acl_role_3df40327c30b6210eae2e04bb0013176</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-05 11:17:54</sys_updated_on><sys_user_role display_value="x_1809800_event_0.event_booking_user" name="x_1809800_event_0.event_booking_user">94250a6fc3836210eae2e04bb0013147</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1080396267</payload_hash>
+        <record_name>x_1809800_event_0_event_booking.x_1809800_event_0.event_booking_user</record_name>
+        <reverted_from/>
+        <source>dc5306ebc3836210eae2e04bb0013132</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 11:17:54</sys_created_on>
+        <sys_id>69050327c30b6210eae2e04bb001317f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19879f3c0580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 11:17:54</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>ed050327c90b62105d7cfa9e78623c7e</update_guid>
+        <update_guid_history>ed050327c90b62105d7cfa9e78623c7e:-1080396267</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1809800_event_0_event_booking.x_1809800_event_0.event_booking_user">5ffb43afc30b6210eae2e04bb0013169</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 11:48:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>66c5bfd39c964a10af499bb8bd7b2a40</sys_id>
+        <sys_metadata>3df40327c30b6210eae2e04bb0013176</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1809800_event_0_event_booking.x_1809800_event_0.event_booking_user</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_parent display_value="x_1809800_event_0_event_booking.*">9f534b63c30b6210eae2e04bb001316d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_scope_delete display_value="">1b77d2312a5e40009b143f0e0a900000</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_3df40327c30b6210eae2e04bb0013176</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_3df40327c30b6210eae2e04bb0013176">69050327c30b6210eae2e04bb001317f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 11:48:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

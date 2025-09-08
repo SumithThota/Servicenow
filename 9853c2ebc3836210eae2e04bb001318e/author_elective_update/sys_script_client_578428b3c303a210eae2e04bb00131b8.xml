@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>KAPCheckINReadonly</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	if(g_user.hasRoleFromList("x_1809800_event_0.event_booking_user,x_1809800_event_0.event_user,x_1809800_event_0.event_room_user"))
+	{
+		g_form.setReadOnly('check_in_time',true);
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 18:20:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>578428b3c303a210eae2e04bb00131b8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>KAPCheckINReadonly</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_client_578428b3c303a210eae2e04bb00131b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 18:28:01</sys_updated_on>
+        <table>x_1809800_event_0_event_booking</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</application>
+        <file_path/>
+        <instance_id>699cbc351b31f5d06a85eb9b2d4bcbb3</instance_id>
+        <instance_name>dev182494</instance_name>
+        <name>sys_script_client_578428b3c303a210eae2e04bb00131b8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;KAPCheckINReadonly&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	if(g_user.hasRoleFromList("x_1809800_event_0.event_booking_user,x_1809800_event_0.event_user,x_1809800_event_0.event_room_user"))
+	{
+		g_form.setReadOnly('check_in_time',true);
+	}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-08-05 18:20:17&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;578428b3c303a210eae2e04bb00131b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;KAPCheckINReadonly&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Event Space Booking " source="x_1809800_event_0"&gt;9853c2ebc3836210eae2e04bb001318e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Event Space Booking "&gt;9853c2ebc3836210eae2e04bb001318e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_578428b3c303a210eae2e04bb00131b8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-08-05 18:28:01&lt;/sys_updated_on&gt;&lt;table&gt;x_1809800_event_0_event_booking&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1598830727</payload_hash>
+        <record_name>KAPCheckINReadonly</record_name>
+        <reverted_from/>
+        <source>dc5306ebc3836210eae2e04bb0013132</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 18:28:01</sys_created_on>
+        <sys_id>86772c77c303a210eae2e04bb0013114</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1987b7d89480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 18:28:01</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>0e772c77bb03a210408e305899099413</update_guid>
+        <update_guid_history>0e772c77bb03a210408e305899099413:-1598830727,feb6e8779103a2109976140be20387c4:804641019,945620774503a21009758d6db02c22fa:-1324478978,70b5acf3f803a21059b16f19306df7c9:-109026644</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 18:47:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0081d2785e04408080006c843f11d100</sys_id>
+        <sys_metadata>578428b3c303a210eae2e04bb00131b8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KAPCheckINReadonly</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_parent display_value="Event Booking">c4a54eafc3836210eae2e04bb0013153</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_scope_delete display_value="">1b77d2312a5e40009b143f0e0a900000</sys_scope_delete>
+        <sys_update_name>sys_script_client_578428b3c303a210eae2e04bb00131b8</sys_update_name>
+        <sys_update_version display_value="sys_script_client_578428b3c303a210eae2e04bb00131b8">86772c77c303a210eae2e04bb0013114</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 18:47:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

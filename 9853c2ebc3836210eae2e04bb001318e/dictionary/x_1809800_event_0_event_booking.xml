@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c4a54eafc3836210eae2e04bb0013153" label="Event Booking" max_length="40" name="x_1809800_event_0_event_booking" type="collection">
+        <element label="End Date" max_length="40" name="end_date" type="glide_date_time"/>
+        <element label="Room " mandatory="true" max_length="32" name="room" reference="x_1809800_event_0_event_room" reference_qual="javascript:new KAPRoomsFilteredBasedOnAvailabilityOfStartEnd().getAvailableRoomsQuery(current.start_date.toString(),current.end_date.toString());" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Reason for  Cancellation" max_length="40" name="reason_for_cancellation" type="string"/>
+        <element label="Purpose" max_length="40" name="purpose" type="string"/>
+        <element label="Notes" max_length="40" name="notes" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Booked By " max_length="32" name="booked_by" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element choice="1" label="Status " max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+                <element inactive_on_update="false" label="Confirmed" value="confirmed"/>
+                <element inactive_on_update="false" label="Active" value="active"/>
+                <element inactive_on_update="false" label="Completed" value="completed"/>
+            </choice>
+        </element>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date_time"/>
+        <element label="Check-in Time " max_length="40" name="check_in_time" read_only="true" type="glide_date_time"/>
+        <index name="index">
+            <element name="booked_by"/>
+        </index>
+        <index name="index2">
+            <element name="room"/>
+        </index>
+    </element>
+</database>

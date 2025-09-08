@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1809800_event_0_event_booking</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>KAPRoomUnderMaintainance</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// (function executeRule(current, previous /*null when async*/ ) {
+//     var newStartDate = new GlideDateTime(current.start_datetime); // 
+//     var newEndDate = new GlideDateTime(current.end_datetime);
+
+//     var gr = new GlideRecord('x_1809800_event_0_event_room');
+//     gr.addQuery('room', current.room); // Check same room
+// 	gr.addQuery('start_date', newStartDate); 
+// 	gr.addQuery('end_date', newEndDate); 
+//     gr.query();
+
+//     if (gr.hasNext()) {
+// 		gr.setValue(status,"under_maintainance");
+//         gs.addInfoMessage("Successfully this room status is kept as under maintenance in evnt room table");
+//     }
+
+
+// })(current, previous);
+
+
+(function executeRule(current, previous /*null when async*/) {
+    var bookStart = new GlideDateTime(current.start_date);
+    var bookEnd = new GlideDateTime(current.end_date);
+
+    var gr = new GlideRecord('x_1809800_event_0_room_maintenance');
+    gr.addQuery('room', current.room);
+    gr.addQuery('start_dateTime', '<=', bookEnd);
+    gr.addQuery('end_dateTime', '>=', bookStart);
+    gr.query();
+
+    if (gr.hasNext()) {
+        gs.addErrorMessage("Sorry, this room can't be allocated since it is under maintenance.");
+        current.setAbortAction(true);
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-07 17:54:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a6f2650c3176610eae2e04bb001315f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>KAPRoomUnderMaintainance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_0a6f2650c3176610eae2e04bb001315f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-03 05:39:30</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a6f2650c3176610eae2e04bb001315f"/>
+</record_update>
