@@ -5,6 +5,7 @@
         <element label="Has  Whiteboard" max_length="40" name="has_whiteboard" type="boolean"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element label="Has Projector" max_length="40" name="has_projector" type="boolean"/>
+        <element label="Test Source Control" max_length="40" name="test_source_control" type="string"/>
         <element choice="1" label="Status " max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Under Maintenance" value="under_maintenance"/>
