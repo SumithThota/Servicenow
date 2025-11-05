@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description/>
+        <layout><![CDATA[<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f6f8fa" style="padding: 20px 0;">
+<tbody>
+<tr>
+<td align="center"><!-- Main Container -->
+<table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden;"><!-- Header -->
+<tbody>
+<tr>
+<td bgcolor="#003366" style="padding: 20px; text-align: center; color: #ffffff;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody>
+<tr>
+<td align="left" width="60"><img src="/sys_attachment.do?sys_id=0ccd50eac39fee10eae2e04bb0013172" alt="Kaptius Logo" width="50" height="50" style="display: block; border: 2px solid #ffffff;" title="kaptius-we-make-workflow-34030f52.webp"></td>
+<td align="left" style="font-size: 20px; font-weight: bold; padding-left: 15px; color: #ffffff;">KAPTIUS - We Make Workflow</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding: 30px; color: #333333; font-size: 16px; line-height: 24px;"><!-- Dynamic body from ServiceNow -->
+<div class="content">${notification:body}</div>
+</td>
+</tr>
+<!-- Footer -->
+<tr>
+<td bgcolor="#f2f2f2" style="padding: 20px; font-size: 12px; color: #888888; text-align: center; line-height: 18px;"><strong>Sumith Thota</strong><br>Associate Developer<br>My Home Hub, 7<sup>th</sup> floor, Block-1, West wing,<br>Hi-Tech City, Hyderabad, Telangana, India<br>Phone: 8500448118 | <a href="mailto:sumith.thota@kaptius.com" style="color: #888888; text-decoration: underline;">sumith.thota@kaptius.com</a><br><a href="http://www.kaptius.com/" style="color: #888888;">www.kaptius.com</a><br><br>&copy; 2025 KAPTIUS. All rights reserved.<br>This is an automated message. Please do not reply to this email.</td>
+</tr>
+</tbody>
+</table>
+<!-- End Main Container --></td>
+</tr>
+</tbody>
+</table>
+</center>]]></layout>
+        <name>KAP Custom Layout Booking</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-14 06:49:16</sys_created_on>
+        <sys_id>f27d18eac39fee10eae2e04bb00131dc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>KAP Custom Layout Booking</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_email_layout_f27d18eac39fee10eae2e04bb00131dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-02 10:13:23</sys_updated_on>
+    </sys_email_layout>
+</record_update>

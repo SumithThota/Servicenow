@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application/>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Room Maintenances</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1809800_event_0_room_maintenance</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1809800_event_0.room_maintenance_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 06:42:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04e582efc3836210eae2e04bb00131d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room Maintenances</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_app_module_04e582efc3836210eae2e04bb00131d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 06:42:00</sys_updated_on>
+        <timeline_page/>
+        <title>Room Maintenances</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</application>
+        <file_path/>
+        <instance_id>699cbc351b31f5d06a85eb9b2d4bcbb3</instance_id>
+        <instance_name>dev182494</instance_name>
+        <name>sys_app_module_04e582efc3836210eae2e04bb00131d9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application/><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Room Maintenances</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1809800_event_0_room_maintenance</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1809800_event_0.room_maintenance_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-05 06:42:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>04e582efc3836210eae2e04bb00131d9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Room Maintenances</sys_name><sys_overrides/><sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package><sys_policy/><sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope><sys_update_name>sys_app_module_04e582efc3836210eae2e04bb00131d9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-05 06:42:00</sys_updated_on><timeline_page/><title>Room Maintenances</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-252084626</payload_hash>
+        <record_name>Room Maintenances</record_name>
+        <reverted_from/>
+        <source>dc5306ebc3836210eae2e04bb0013132</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 07:45:27</sys_created_on>
+        <sys_id>2d645627c3076210eae2e04bb001315a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1987931411d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 07:45:27</sys_updated_on>
+        <type>Module</type>
+        <update_guid>00e582ef68836210508cdc7e35a0a9db</update_guid>
+        <update_guid_history>00e582ef68836210508cdc7e35a0a9db:-1028308967,00e582ef68836210508cdc7e35a0a9db:-1028308967</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Room Maintenances">bc869aa7c3076210eae2e04bb001311e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 07:54:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>2c0b2dac02c047c1a5fbec6b229406d9</sys_id>
+        <sys_metadata>04e582efc3836210eae2e04bb00131d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room Maintenances</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_scope_delete display_value="">1b77d2312a5e40009b143f0e0a900000</sys_scope_delete>
+        <sys_update_name>sys_app_module_04e582efc3836210eae2e04bb00131d9</sys_update_name>
+        <sys_update_version display_value="sys_app_module_04e582efc3836210eae2e04bb00131d9">2d645627c3076210eae2e04bb001315a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 07:54:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

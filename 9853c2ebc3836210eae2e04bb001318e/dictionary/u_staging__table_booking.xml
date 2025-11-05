@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9b3266f6c3fb2a50eae2e04bb00131dc" extends="sys_import_set_row" label="Staging  Table Booking" max_length="40" name="u_staging__table_booking" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=size" label="size" max_length="40" name="u_size" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="40" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Location" label="Location" max_length="40" name="u_location" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1809800_event_0.GetLastBookingDaysAgo</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GetLastBookingDaysAgo</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// var GetLastBookingDaysAgo = Class.create();
+// GetLastBookingDaysAgo.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+//   isPublic: function() {
+//     return true;
+//   },
+//   getDaysSinceLastBooking: function() {
+//     var userId = gs.getUserID();
+//     var gr = new GlideRecord("x_1809800_event_0_event_booking");
+
+//     gr.addQuery('booked_by', userId);
+//     gr.orderByDesc('start_date');
+//     gr.setLimit(1);
+//     gr.query();
+
+//     if (gr.next()) {
+//       var lastDateStr = gr.getValue('start_date').split(' ')[0]; // yyyy-MM-dd
+//       var lastDate = new GlideDateTime(lastDateStr + " 00:00:00");
+
+//       var today = new GlideDateTime();
+//       today.setDisplayValueInternal(today.getDate() + " 00:00:00"); // Strip time
+
+//       var diffMillis = GlideDateTime.subtract(today, lastDate).getNumericValue();
+//       var days = Math.floor(diffMillis / (1000 * 60 * 60 * 24));
+
+//       // Ensure it returns a valid number as string
+//       return isNaN(days) ? '0' : days.toString();
+//     }
+
+//     return '-1'; // No bookings found
+//   }
+
+// });
+var GetLastBookingDaysAgo = Class.create();
+GetLastBookingDaysAgo.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getDaysSinceLastBooking: function() {
+        var userId = gs.getUserID();
+        var gr = new GlideRecord("x_1809800_event_0_event_booking"); // Your actual table
+
+        gr.addQuery('booked_by', userId);
+        gr.orderByDesc('start_date'); // Sort by latest
+        gr.setLimit(1);
+        gr.query();
+
+        if (gr.next()) {
+            var last = new GlideDateTime(gr.getValue('start_date'));
+            var now = new GlideDateTime();
+            var diffMillis = GlideDateTime.subtract(now, last).getNumericValue();
+            var days = Math.floor(diffMillis / (1000 * 60 * 60 * 24));
+
+            return days + '';
+        }
+
+        return '-1'; // No bookings found
+    }
+
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 17:19:05</sys_created_on>
+        <sys_id>6b275433c3cf6210eae2e04bb0013188</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>GetLastBookingDaysAgo</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_script_include_6b275433c3cf6210eae2e04bb0013188</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 17:57:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <batch_size>1000</batch_size>
+        <category/>
+        <connection_override_last_success_time/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:mysql://sql12.freesqldatabase.com:3306/sql12798058</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <data_in_single_column>false</data_in_single_column>
+        <data_loader><![CDATA[(function loadData(import_set_table, data_source, import_log, last_success_import_time, partition_info) {
+
+ // Add your code here to insert data to import_set_table 
+
+})(import_set_table, data_source, import_log, last_success_import_time, partition_info);]]></data_loader>
+        <database_name>sql12798058</database_name>
+        <database_port>3306</database_port>
+        <discard_arrays>true</discard_arrays>
+        <enable_parallel_loading>false</enable_parallel_loading>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>org.mariadb.jdbc.Driver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>1</header_row>
+        <import_set_table_label>Sql Data source Stagging</import_set_table_label>
+        <import_set_table_name>x_1809800_event_0_sql_data_source_stagging</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>﷞﷟﷒0b2368e3c3bfea50eae2e04bb0013153﷬﷔1﷬﷭BWrAWYTvWo4Z2R1lf437bg==6gKYE_h1_onNGBIRqmHhspP25zJfEIzoOAY=﷮﷯</jdbc_password>
+        <jdbc_server>sql12.freesqldatabase.com</jdbc_server>
+        <jdbc_user_name>sql12798058</jdbc_user_name>
+        <jpath_root_node/>
+        <last_run_database_field/>
+        <last_run_datetime/>
+        <last_success_import_time/>
+        <ldap_target/>
+        <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
+        <limit/>
+        <maximum_rows/>
+        <mid_server/>
+        <name>Sql Data source</name>
+        <offset>0</offset>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>orcl</oracle_sid>
+        <parallel_loading_script><![CDATA[(function loadTasks(parallel_job_loader, data_source, import_log, last_success_import_time) {
+
+	// Invoke third party API, create partitions and insert partitions info in parallel job table
+
+})(parallel_job_loader, data_source, import_log, last_success_import_time);]]></parallel_loading_script>
+        <parsing_script><![CDATA[// The input value can be accessed through the variables named "line", "lineNumber" and "result"
+// The function uses result variable to return parse result back. 
+(function(line,lineNumber,result) {
+	// add code here
+})(line,lineNumber,result);]]></parsing_script>
+        <properties/>
+        <query>All Rows from Table</query>
+        <query_timeout>0</query_timeout>
+        <request_action/>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_name>1</sheet_name>
+        <sheet_number>1</sheet_number>
+        <sql_statement/>
+        <ssh_keyfile_path/>
+        <support_pagination>false</support_pagination>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-11 06:17:51</sys_created_on>
+        <sys_id>d652aca3c3bfea50eae2e04bb001317d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Sql Data source</sys_name>
+        <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+        <sys_update_name>sys_data_source_d652aca3c3bfea50eae2e04bb001317d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-11 06:30:16</sys_updated_on>
+        <table_name>Room</table_name>
+        <type>JDBC</type>
+        <use_batch_import>false</use_batch_import>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>false</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

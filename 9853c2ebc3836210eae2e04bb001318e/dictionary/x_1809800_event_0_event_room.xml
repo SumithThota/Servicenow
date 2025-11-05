@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dfa4026fc3836210eae2e04bb0013116" label="Event Room" max_length="40" name="x_1809800_event_0_event_room" type="collection">
+        <element attributes="omit_sys_original=true" label="Cost" max_length="20" name="cost" type="currency"/>
+        <element label="Capacity" max_length="40" name="capacity" type="integer"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Has  Whiteboard" max_length="40" name="has_whiteboard" type="boolean"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Has Projector" max_length="40" name="has_projector" type="boolean"/>
+        <element label="Test Source Control" max_length="40" name="test_source_control" type="string"/>
+        <element choice="1" label="Status " max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Under Maintenance" value="under_maintenance"/>
+                <element inactive_on_update="false" label="Available" value="available"/>
+                <element inactive_on_update="false" label="Blocked" value="blocked"/>
+            </choice>
+        </element>
+        <element label="Notes" max_length="40" name="notes" type="string"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

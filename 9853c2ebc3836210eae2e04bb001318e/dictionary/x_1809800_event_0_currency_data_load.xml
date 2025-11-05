@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="110ea4e3c3ffea50eae2e04bb0013150" extends="sys_import_set_row" label="Currency data load" max_length="40" name="x_1809800_event_0_currency_data_load" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=cost value" label="cost value" max_length="40" name="u_cost_value" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="40" name="u_name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f98935eec3f3e650eae2e04bb001314c" sys_domain="global" table="x_1809800_event_0_event_booking" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-08 10:01:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>428935eec3f3e650eae2e04bb0013151</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1809800_event_0_event_booking" name="x_1809800_event_0_event_booking" sys_domain="global" view="Default view">f98935eec3f3e650eae2e04bb001314c</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1809800_event_0_event_booking" sys_domain="global" view="Default view">b1aa02a7c3c36210eae2e04bb0013119</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-08 10:01:14</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-08 10:01:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>028935eec3f3e650eae2e04bb0013152</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1809800_event_0_event_booking" name="x_1809800_event_0_event_booking" sys_domain="global" view="Default view">f98935eec3f3e650eae2e04bb001314c</sys_ui_form>
+            <sys_ui_section caption="Description Type Messages" display_value="Description Type Messages" name="x_1809800_event_0_event_booking" sys_domain="global" view="Default view">398935eec3f3e650eae2e04bb001314b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-08 10:01:14</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1809800_event_0_event_booking</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-08 10:01:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f98935eec3f3e650eae2e04bb001314c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1809800_event_0_event_booking</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Event Space Booking " source="x_1809800_event_0">9853c2ebc3836210eae2e04bb001318e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Event Space Booking ">9853c2ebc3836210eae2e04bb001318e</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f98935eec3f3e650eae2e04bb001314c</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-08 10:01:13</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
