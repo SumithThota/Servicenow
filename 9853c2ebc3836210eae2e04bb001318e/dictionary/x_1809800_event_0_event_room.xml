@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="dfa4026fc3836210eae2e04bb0013116" label="Event Room" max_length="40" name="x_1809800_event_0_event_room" type="collection">
+        <element attributes="omit_sys_original=true" label="Cost" max_length="20" name="cost" type="currency"/>
         <element label="Capacity" max_length="40" name="capacity" type="integer"/>
         <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
         <element label="Has  Whiteboard" max_length="40" name="has_whiteboard" type="boolean"/>
